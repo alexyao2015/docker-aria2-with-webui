@@ -1,3 +1,6 @@
+<a href="https://github.com/alexyao2015/docker-aria2-with-webui/actions"><img alt="GitHub Actions Build" src="https://github.com/alexyao2015/docker-aria2-with-webui/workflows/Deploy/badge.svg"></a>
+<a href="https://hub.docker.com/r/yaoa/docker-aria2-with-webui"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/yaoa/docker-aria2-with-webui.svg"></a>
+
 Custom webui tree selection. No other changes.
 
 
