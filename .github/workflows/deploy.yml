@@ -43,6 +43,13 @@ jobs:
         run: |
           docker tag $image_id yaoa/docker-aria2-with-webui:nightly
           docker push yaoa/docker-aria2-with-webui:nightly
+      - name: Deploy Run Number
+        if: ${{ github.head_ref == '' && github.sha != '' }}
+        env:
+          image_id: ${{ steps.build_image.outputs.image_id }}
+        run: |
+          docker tag $image_id yaoa/docker-aria2-with-webui:$GITHUB_RUN_NUMBER
+          docker push yaoa/docker-aria2-with-webui:$GITHUB_RUN_NUMBER
       - name: Deploy Develop
         if: ${{ github.head_ref == '' && startsWith(github.ref, 'refs/heads/dev') }}
         env:
